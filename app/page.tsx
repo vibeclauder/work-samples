@@ -9,6 +9,7 @@ const audioSamples = [
 ];
 
 const capabilities = [
+  'Agent operations — durable handoffs, progress detection, restart boundaries, audit ledgers, and human checkpoints for long-running coding agents',
   'Programmatic video — Python, Pillow, and FFmpeg pipelines for typography-driven motion pieces, delivered as H.264/AAC',
   'Audio synthesis — NumPy DSP for music loops and UI sound effects, delivered as WAV',
   'Web — Next.js, React, TypeScript, and Tailwind CSS; static sites deployed on GitHub Pages',
@@ -23,15 +24,76 @@ export default function Home() {
           William Bradway
         </h1>
         <p className="mt-3 text-lg text-zinc-400">
-          Work samples — programmatic media &amp; web
+          Work samples — AI implementation, programmatic media &amp; web
         </p>
         <p className="mt-6 max-w-3xl text-base leading-relaxed text-zinc-300">
-          Everything below is an original spec sample or a shipped public site.
-          No client work is shown.
+          Everything below is an original system, spec sample, or shipped public
+          site. No client case studies are shown.
         </p>
       </header>
 
       <main>
+        <section
+          aria-labelledby="agent-heading"
+          className="border-b border-zinc-800 py-14 sm:py-16"
+        >
+          <p className="text-sm font-medium tracking-widest text-emerald-400 uppercase">
+            AI implementation
+          </p>
+          <h2
+            id="agent-heading"
+            className="mt-2 text-2xl font-semibold tracking-tight text-zinc-50"
+          >
+            Agent Continuity Kit
+          </h2>
+          <p className="mt-4 max-w-3xl leading-relaxed text-zinc-300">
+            A reference implementation for a costly operational failure: an
+            unattended coding-agent loop looked alive while making no material
+            progress. The kit separates process liveness from useful output,
+            preserves structured context across restarts, and keeps commercial
+            activity distinct from settled revenue.
+          </p>
+
+          <div className="mt-8 grid max-w-5xl gap-4 sm:grid-cols-3">
+            <article className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-5">
+              <p className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+                Failure addressed
+              </p>
+              <p className="mt-3 leading-relaxed text-zinc-200">
+                Silent stalls, context loss, duplicate work, and ambiguous
+                progress during long-running agent sessions.
+              </p>
+            </article>
+            <article className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-5">
+              <p className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+                Controls built
+              </p>
+              <p className="mt-3 leading-relaxed text-zinc-200">
+                Handoff validation, watchdog recovery, stall quarantine,
+                explicit stop control, and append-only audit history.
+              </p>
+            </article>
+            <article className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-5">
+              <p className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+                Verification
+              </p>
+              <p className="mt-3 leading-relaxed text-zinc-200">
+                Four end-to-end test files with 26 passing checks, including
+                failure simulations and strict revenue-state validation.
+              </p>
+            </article>
+          </div>
+
+          <p className="mt-6 flex flex-wrap gap-x-8 gap-y-2">
+            <a
+              href="https://github.com/vibeclauder/flagship-agent-continuity"
+              className={linkClass}
+            >
+              Source, architecture &amp; tests
+            </a>
+          </p>
+        </section>
+
         <section
           aria-labelledby="video-heading"
           className="border-b border-zinc-800 py-14 sm:py-16"
@@ -184,8 +246,8 @@ export default function Home() {
 
       <footer className="border-t border-zinc-800 py-10">
         <p className="text-sm text-zinc-500">
-          All samples on this page are original work produced with the workflow
-          described. &copy; 2026 William Bradway
+          All samples on this page are original work produced with the systems
+          and workflows described. &copy; 2026 William Bradway
         </p>
       </footer>
     </div>

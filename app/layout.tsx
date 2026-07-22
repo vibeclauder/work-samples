@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'William Bradway — Work samples',
-  description: 'Work samples — programmatic media & web',
+  description: 'Work samples — AI implementation, programmatic media & web',
   icons: { icon: 'favicon.png' },
 };
 
