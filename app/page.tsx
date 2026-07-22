@@ -10,6 +10,7 @@ const audioSamples = [
 
 const capabilities = [
   'Agent operations — durable handoffs, progress detection, restart boundaries, audit ledgers, and human checkpoints for long-running coding agents',
+  'Workflow reliability — local n8n export analysis, secret-hygiene checks, retry/error-path review, and prioritized remediation',
   'Programmatic video — Python, Pillow, and FFmpeg pipelines for typography-driven motion pieces, delivered as H.264/AAC',
   'Audio synthesis — NumPy DSP for music loops and UI sound effects, delivered as WAV',
   'Web — Next.js, React, TypeScript, and Tailwind CSS; static sites deployed on GitHub Pages',
@@ -90,6 +91,67 @@ export default function Home() {
               className={linkClass}
             >
               Source, architecture &amp; tests
+            </a>
+          </p>
+        </section>
+
+        <section
+          aria-labelledby="n8n-audit-heading"
+          className="border-b border-zinc-800 py-14 sm:py-16"
+        >
+          <p className="text-sm font-medium tracking-widest text-emerald-400 uppercase">
+            Workflow reliability
+          </p>
+          <h2
+            id="n8n-audit-heading"
+            className="mt-2 text-2xl font-semibold tracking-tight text-zinc-50"
+          >
+            n8n Reliability Audit
+          </h2>
+          <p className="mt-4 max-w-3xl leading-relaxed text-zinc-300">
+            A dependency-free CLI that audits sanitized n8n workflow exports
+            locally. It identifies embedded-secret risk, missing error
+            workflows, disconnected nodes, brittle retry behavior, coupled
+            webhook acknowledgements, and handoff ambiguity—without uploading
+            the workflow or reproducing parameter values in its report.
+          </p>
+
+          <div className="mt-8 grid max-w-5xl gap-4 sm:grid-cols-3">
+            <article className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-5">
+              <p className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+                Privacy boundary
+              </p>
+              <p className="mt-3 leading-relaxed text-zinc-200">
+                Runs locally, makes no network requests, and reports finding
+                metadata rather than workflow values or credential contents.
+              </p>
+            </article>
+            <article className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-5">
+              <p className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+                Actionable output
+              </p>
+              <p className="mt-3 leading-relaxed text-zinc-200">
+                Markdown and JSON scorecards include evidence, severity, a
+                recommended fix, and a SHA-256 source fingerprint.
+              </p>
+            </article>
+            <article className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-5">
+              <p className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+                Verification
+              </p>
+              <p className="mt-3 leading-relaxed text-zinc-200">
+                Four automated tests cover risky and hardened workflows,
+                multi-workflow exports, invalid input, and secret redaction.
+              </p>
+            </article>
+          </div>
+
+          <p className="mt-6 flex flex-wrap gap-x-8 gap-y-2">
+            <a
+              href="https://github.com/vibeclauder/n8n-reliability-audit"
+              className={linkClass}
+            >
+              Source, sample report &amp; fixed-price review
             </a>
           </p>
         </section>
