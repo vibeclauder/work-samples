@@ -12,6 +12,7 @@ const capabilities = [
   'Agent operations — durable handoffs, progress detection, restart boundaries, audit ledgers, and human checkpoints for long-running coding agents',
   'Agent reliability — offline log triage for silent failures, dead-end runs, retry storms, tool-contract errors, loops, latency tails, and duplicate side effects',
   'Workflow reliability — local n8n export analysis, secret-hygiene checks, retry/error-path review, and prioritized remediation',
+  'Workflow opportunity analysis — client-input-only time, cost, error, and payback baselines with explicit assumptions',
   'Programmatic video — Python, Pillow, and FFmpeg pipelines for typography-driven motion pieces, delivered as H.264/AAC',
   'Audio synthesis — NumPy DSP for music loops and UI sound effects, delivered as WAV',
   'Web — Next.js, React, TypeScript, and Tailwind CSS; static sites deployed on GitHub Pages',
@@ -47,15 +48,16 @@ export default function Home() {
               id="work-with-me-heading"
               className="mt-2 text-2xl font-semibold tracking-tight text-zinc-50"
             >
-              Have an n8n workflow or AI agent that fails unpredictably?
+              Have a repetitive workflow that costs time—or an automation that fails unpredictably?
             </h2>
             <p className="mt-4 max-w-3xl leading-relaxed text-zinc-300">
-              I work directly as an individual contractor. Run either public
-              audit tool yourself for free, request a $49 asynchronous review
-              of one sanitized export or log, or scope a $250 remediation of
-              one confirmed defect. Ongoing CI-based regression monitoring can
-              be scoped after the workflow is stable. No production credentials
-              are needed for the initial review.
+              I work directly as an individual contractor. Use the public tools
+              yourself for free, request a $49 asynchronous reliability review,
+              commission a $250 Workflow Opportunity Audit from your own
+              numbers, or scope a $250 remediation of one confirmed defect.
+              Ongoing CI-based regression monitoring can be scoped after the
+              workflow is stable. No production credentials are needed for the
+              initial conversation.
             </p>
             <p className="mt-5 text-sm leading-relaxed text-zinc-400">
               Do not attach credentials, customer content, or unsanitized
@@ -64,10 +66,10 @@ export default function Home() {
             </p>
             <p className="mt-6">
               <a
-                href="mailto:william28918@outlook.com?subject=Reliability%20review%20request"
+                href="mailto:william28918@outlook.com?subject=Workflow%20audit%20or%20reliability%20review"
                 className={linkClass}
               >
-                Request a reliability review
+                Request a workflow audit or reliability review
               </a>
             </p>
           </div>
@@ -130,6 +132,69 @@ export default function Home() {
               className={linkClass}
             >
               Source, architecture &amp; tests
+            </a>
+          </p>
+        </section>
+
+        <section
+          aria-labelledby="opportunity-audit-heading"
+          className="border-b border-zinc-800 py-14 sm:py-16"
+        >
+          <p className="text-sm font-medium tracking-widest text-emerald-400 uppercase">
+            Workflow opportunity
+          </p>
+          <h2
+            id="opportunity-audit-heading"
+            className="mt-2 text-2xl font-semibold tracking-tight text-zinc-50"
+          >
+            Workflow Opportunity Audit
+          </h2>
+          <p className="mt-4 max-w-3xl leading-relaxed text-zinc-300">
+            An offline calculator and delivery kit for turning a client&apos;s own
+            workload, cost, and error figures into an auditable current-state
+            baseline. Optional automation projections require explicit inputs
+            and distinguish labour-capacity value from guaranteed cash savings.
+          </p>
+
+          <div className="mt-8 grid max-w-5xl gap-4 sm:grid-cols-3">
+            <article className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-5">
+              <p className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+                No hidden assumptions
+              </p>
+              <p className="mt-3 leading-relaxed text-zinc-200">
+                Working weeks and monitoring cost must be stated explicitly;
+                missing evidence becomes a visible gap instead of a guessed
+                number.
+              </p>
+            </article>
+            <article className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-5">
+              <p className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+                Buyer-ready output
+              </p>
+              <p className="mt-3 leading-relaxed text-zinc-200">
+                Produces a one-page Markdown baseline, optional modelled-value
+                projection, provenance record, discovery worksheet, and client
+                deliverable template.
+              </p>
+            </article>
+            <article className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-5">
+              <p className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+                Verification
+              </p>
+              <p className="mt-3 leading-relaxed text-zinc-200">
+                Seventeen automated tests cover baseline and error economics,
+                payback, missing-input honesty, validation, provenance, and
+                report language.
+              </p>
+            </article>
+          </div>
+
+          <p className="mt-6 flex flex-wrap gap-x-8 gap-y-2">
+            <a
+              href="https://github.com/vibeclauder/workflow-opportunity-audit"
+              className={linkClass}
+            >
+              Source, worked example &amp; $250 audit option
             </a>
           </p>
         </section>

@@ -4,7 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'William Bradway — AI workflow and agent reliability',
   description:
-    'Offline n8n and AI-agent reliability audits, bounded remediation, and verified implementation work by William Bradway.',
+    'Offline workflow opportunity and reliability audits, bounded remediation, and verified AI implementation work by William Bradway.',
   icons: { icon: 'favicon.png' },
 };
 
