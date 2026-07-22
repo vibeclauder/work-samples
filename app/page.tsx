@@ -10,6 +10,7 @@ const audioSamples = [
 
 const capabilities = [
   'Agent operations — durable handoffs, progress detection, restart boundaries, audit ledgers, and human checkpoints for long-running coding agents',
+  'Agent reliability — offline log triage for silent failures, dead-end runs, retry storms, tool-contract errors, loops, latency tails, and duplicate side effects',
   'Workflow reliability — local n8n export analysis, secret-hygiene checks, retry/error-path review, and prioritized remediation',
   'Programmatic video — Python, Pillow, and FFmpeg pipelines for typography-driven motion pieces, delivered as H.264/AAC',
   'Audio synthesis — NumPy DSP for music loops and UI sound effects, delivered as WAV',
@@ -152,6 +153,69 @@ export default function Home() {
               className={linkClass}
             >
               Source, sample report &amp; fixed-price review
+            </a>
+          </p>
+        </section>
+
+        <section
+          aria-labelledby="agent-triage-heading"
+          className="border-b border-zinc-800 py-14 sm:py-16"
+        >
+          <p className="text-sm font-medium tracking-widest text-emerald-400 uppercase">
+            Agent reliability
+          </p>
+          <h2
+            id="agent-triage-heading"
+            className="mt-2 text-2xl font-semibold tracking-tight text-zinc-50"
+          >
+            Agent Reliability Triage
+          </h2>
+          <p className="mt-4 max-w-3xl leading-relaxed text-zinc-300">
+            An offline, dependency-free CLI that turns JSONL or JSON agent logs
+            into an evidence-backed reliability brief. It separates observed
+            defects from instrumentation gaps, maps each finding to a concrete
+            fix, and gives before/after remediation work a reproducible baseline.
+          </p>
+
+          <div className="mt-8 grid max-w-5xl gap-4 sm:grid-cols-3">
+            <article className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-5">
+              <p className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+                Failure taxonomy
+              </p>
+              <p className="mt-3 leading-relaxed text-zinc-200">
+                Detects 11 operational failure classes, including silent
+                successes, dead-end runs, retry storms, repeated tool calls,
+                truncation, and duplicate outbound actions.
+              </p>
+            </article>
+            <article className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-5">
+              <p className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+                Safe evidence
+              </p>
+              <p className="mt-3 leading-relaxed text-zinc-200">
+                Runs without network access, reports missing telemetry instead
+                of guessing, and redacts common credential shapes from Markdown
+                evidence excerpts by default.
+              </p>
+            </article>
+            <article className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-5">
+              <p className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+                Verification
+              </p>
+              <p className="mt-3 leading-relaxed text-zinc-200">
+                44 end-to-end assertions exercise the real CLI across known-bad
+                logs, a clean baseline, alternate field names, malformed input,
+                report safety, and CI exit behavior.
+              </p>
+            </article>
+          </div>
+
+          <p className="mt-6 flex flex-wrap gap-x-8 gap-y-2">
+            <a
+              href="https://github.com/vibeclauder/agent-reliability-triage"
+              className={linkClass}
+            >
+              Source, sample report &amp; bounded review options
             </a>
           </p>
         </section>
