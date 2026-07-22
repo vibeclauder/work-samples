@@ -13,6 +13,7 @@ const capabilities = [
   'Agent reliability — offline log triage for silent failures, dead-end runs, retry storms, tool-contract errors, loops, latency tails, and duplicate side effects',
   'Workflow reliability — local n8n export analysis, secret-hygiene checks, retry/error-path review, and prioritized remediation',
   'Workflow opportunity analysis — client-input-only time, cost, error, and payback baselines with explicit assumptions',
+  'Human-in-the-loop controls — fail-closed approval policies, single-attempt execution guards, redacted input projections, and tamper-evident audit trails',
   'Programmatic video — Python, Pillow, and FFmpeg pipelines for typography-driven motion pieces, delivered as H.264/AAC',
   'Audio synthesis — NumPy DSP for music loops and UI sound effects, delivered as WAV',
   'Web — Next.js, React, TypeScript, and Tailwind CSS; static sites deployed on GitHub Pages',
@@ -132,6 +133,71 @@ export default function Home() {
               className={linkClass}
             >
               Source, architecture &amp; tests
+            </a>
+          </p>
+        </section>
+
+        <section
+          aria-labelledby="approval-gate-heading"
+          className="border-b border-zinc-800 py-14 sm:py-16"
+        >
+          <p className="text-sm font-medium tracking-widest text-emerald-400 uppercase">
+            AI workflow safety
+          </p>
+          <h2
+            id="approval-gate-heading"
+            className="mt-2 text-2xl font-semibold tracking-tight text-zinc-50"
+          >
+            Human Approval Gate
+          </h2>
+          <p className="mt-4 max-w-3xl leading-relaxed text-zinc-300">
+            A dependency-free reference implementation for pausing consequential
+            AI-workflow actions until a named human approves them. It combines a
+            fail-closed policy engine, a single-attempt execution guard, and a
+            hash-chained audit trail that records a minimized input projection,
+            the decision, and the outcome.
+          </p>
+
+          <div className="mt-8 grid max-w-5xl gap-4 sm:grid-cols-3">
+            <article className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-5">
+              <p className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+                Fail-closed policy
+              </p>
+              <p className="mt-3 leading-relaxed text-zinc-200">
+                Unknown actions pause by default. Externally visible,
+                irreversible, over-threshold, and missing-required-value actions
+                cannot silently fall through to execution.
+              </p>
+            </article>
+            <article className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-5">
+              <p className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+                Race-resistant checkpoint
+              </p>
+              <p className="mt-3 leading-relaxed text-zinc-200">
+                The gate claims an attempt before awaiting the side effect, so
+                concurrent calls cannot invoke it twice in one live instance.
+                Durable state and downstream idempotency remain explicit
+                production requirements.
+              </p>
+            </article>
+            <article className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-5">
+              <p className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+                Verification
+              </p>
+              <p className="mt-3 leading-relaxed text-zinc-200">
+                Twenty-three tests cover approval pause/resume, denial, failure,
+                concurrent execution, replay refusal, redaction, defensive audit
+                copies, and tamper detection across Node 18 and 22.
+              </p>
+            </article>
+          </div>
+
+          <p className="mt-6 flex flex-wrap gap-x-8 gap-y-2">
+            <a
+              href="https://github.com/vibeclauder/approval-gate"
+              className={linkClass}
+            >
+              Source, policy template &amp; verified audit sample
             </a>
           </p>
         </section>
