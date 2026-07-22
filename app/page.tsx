@@ -53,8 +53,9 @@ export default function Home() {
               I work directly as an individual contractor. Run either public
               audit tool yourself for free, request a $49 asynchronous review
               of one sanitized export or log, or scope a $250 remediation of
-              one confirmed defect. No production credentials are needed for
-              the initial review.
+              one confirmed defect. Ongoing CI-based regression monitoring can
+              be scoped after the workflow is stable. No production credentials
+              are needed for the initial review.
             </p>
             <p className="mt-5 text-sm leading-relaxed text-zinc-400">
               Do not attach credentials, customer content, or unsanitized
@@ -172,7 +173,8 @@ export default function Home() {
               </p>
               <p className="mt-3 leading-relaxed text-zinc-200">
                 Markdown and JSON scorecards include evidence, severity, a
-                recommended fix, and a SHA-256 source fingerprint.
+                recommended fix, and a SHA-256 source fingerprint. An immutable,
+                dependency-pinned CI kit can gate workflow changes by severity.
               </p>
             </article>
             <article className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-5">
@@ -180,9 +182,9 @@ export default function Home() {
                 Verification
               </p>
               <p className="mt-3 leading-relaxed text-zinc-200">
-                Seven automated tests cover risky and hardened AI workflows,
-                namespace variations, multi-workflow exports, invalid input,
-                pinned-data safety, and secret redaction.
+                Twelve automated tests cover risky and hardened AI workflows,
+                namespace variations, severity gates, multi-workflow exports,
+                invalid input, pinned-data safety, and secret redaction.
               </p>
             </article>
           </div>
