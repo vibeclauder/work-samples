@@ -113,8 +113,10 @@ export default function Home() {
             A dependency-free CLI that audits sanitized n8n workflow exports
             locally. It identifies embedded-secret risk, missing error
             workflows, disconnected nodes, brittle retry behavior, coupled
-            webhook acknowledgements, and handoff ambiguity—without uploading
-            the workflow or reproducing parameter values in its report.
+            webhook acknowledgements, AI nodes without retry or iteration
+            limits, unbounded HTTP calls, pinned test data, and handoff
+            ambiguity—without uploading the workflow or reproducing parameter
+            values in its report.
           </p>
 
           <div className="mt-8 grid max-w-5xl gap-4 sm:grid-cols-3">
@@ -141,8 +143,9 @@ export default function Home() {
                 Verification
               </p>
               <p className="mt-3 leading-relaxed text-zinc-200">
-                Four automated tests cover risky and hardened workflows,
-                multi-workflow exports, invalid input, and secret redaction.
+                Seven automated tests cover risky and hardened AI workflows,
+                namespace variations, multi-workflow exports, invalid input,
+                pinned-data safety, and secret redaction.
               </p>
             </article>
           </div>
