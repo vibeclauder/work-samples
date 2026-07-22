@@ -36,6 +36,43 @@ export default function Home() {
 
       <main>
         <section
+          aria-labelledby="work-with-me-heading"
+          className="border-b border-zinc-800 py-10 sm:py-12"
+        >
+          <div className="max-w-5xl rounded-xl border border-emerald-900/70 bg-emerald-950/20 p-6 sm:p-8">
+            <p className="text-sm font-medium tracking-widest text-emerald-400 uppercase">
+              Available for bounded work
+            </p>
+            <h2
+              id="work-with-me-heading"
+              className="mt-2 text-2xl font-semibold tracking-tight text-zinc-50"
+            >
+              Have an n8n workflow or AI agent that fails unpredictably?
+            </h2>
+            <p className="mt-4 max-w-3xl leading-relaxed text-zinc-300">
+              I work directly as an individual contractor. Run either public
+              audit tool yourself for free, request a $49 asynchronous review
+              of one sanitized export or log, or scope a $250 remediation of
+              one confirmed defect. No production credentials are needed for
+              the initial review.
+            </p>
+            <p className="mt-5 text-sm leading-relaxed text-zinc-400">
+              Do not attach credentials, customer content, or unsanitized
+              production data to the first message. Scope and payment are
+              confirmed privately before work begins.
+            </p>
+            <p className="mt-6">
+              <a
+                href="mailto:william28918@outlook.com?subject=Reliability%20review%20request"
+                className={linkClass}
+              >
+                Request a reliability review
+              </a>
+            </p>
+          </div>
+        </section>
+
+        <section
           aria-labelledby="agent-heading"
           className="border-b border-zinc-800 py-14 sm:py-16"
         >

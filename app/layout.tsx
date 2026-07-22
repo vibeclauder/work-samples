@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'William Bradway — Work samples',
-  description: 'Work samples — AI implementation, programmatic media & web',
+  title: 'William Bradway — AI workflow and agent reliability',
+  description:
+    'Offline n8n and AI-agent reliability audits, bounded remediation, and verified implementation work by William Bradway.',
   icons: { icon: 'favicon.png' },
 };
 
